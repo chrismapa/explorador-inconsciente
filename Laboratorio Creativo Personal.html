@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio Creativo Personal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Laboratorio Creativo Personal</h1>
+        <div class="section">
+            <h2>Generador de Ideas</h2>
+            <button class="button" onclick="generateIdea()">Generar Idea</button>
+            <p id="idea-output"></p>
+        </div>
+        <div class="section">
+            <h2>Elementos Narrativos</h2>
+            <button class="button" onclick="exploreNarrativeElement()">Explorar Elemento</button>
+            <p id="narrative-element-output"></p>
+        </div>
+        <div class="section">
+            <h2>Preguntas Creativas</h2>
+            <button class="button" onclick="askCreativeQuestion()">Hacer Pregunta</button>
+            <p id="question-output"></p>
+        </div>
+    </div>
+
+    <script>
+        // const ideas = [
+    "Un mundo donde los sueños se comparten",
+    "Una ciudad que cambia de forma cada noche",
+    "Un libro que reescribe su propia historia",
+    "Un personaje que puede viajar entre diferentes estilos artísticos"
+];
+
+const narrativeElements = [
+    "Objetivo", "Intención", "Premisa", "Mensaje", "Tema", "Género", "Tono",
+    "Narrador", "Idea", "Concepto", "Entorno", "Personajes", "Protagonista",
+    "Antagonista", "Deseo", "Conflicto", "Logline", "Storyline", "Storytelling"
+];
+
+const creativeQuestions = [
+    "¿Qué pasaría si tu personaje principal pudiera cambiar el pasado?",
+    "¿Cómo sería un mundo donde la gravedad funciona al revés?",
+    "¿Qué conflicto surgiría si dos personajes opuestos tuvieran que trabajar juntos?",
+    "¿Cómo cambiaría tu historia si se contara desde el punto de vista del antagonista?"
+];
+
+function generateIdea() {
+    const idea = ideas[Math.floor(Math.random() * ideas.length)];
+    document.getElementById('idea-output').textContent = idea;
+}
+
+function exploreNarrativeElement() {
+    const element = narrativeElements[Math.floor(Math.random() * narrativeElements.length)];
+    const output = `Elemento seleccionado: ${element}. ¿Cómo desarrollarías este elemento en tu historia?`;
+    document.getElementById('narrative-element-output').textContent = output;
+}
+
+function askCreativeQuestion() {
+    const question = creativeQuestions[Math.floor(Math.random() * creativeQuestions.length)];
+    document.getElementById('question-output').textContent = question;
+}
+    </script>
+</body>
+</html>
